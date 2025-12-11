@@ -79,11 +79,11 @@ import os
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get('MYSQL_URL')
+        default=os.environ.get("MYSQL_URL")
     )
 }
 
-# Force Django to use MySQL backend with PyMySQL
+# Force MySQL backend using PyMySQL
 DATABASES['default']['ENGINE'] = 'django.db.backends.mysql'
 
 
