@@ -78,8 +78,9 @@ import dj_database_url
 import os
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get("MYSQL_URL")
+    "default": dj_database_url.config(
+        default=os.environ.get("MYSQL_URL"),
+        engine="django.db.backends.mysql"
     )
 }
 
