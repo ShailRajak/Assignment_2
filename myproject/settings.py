@@ -26,8 +26,10 @@ SECRET_KEY = 'django-insecure-$hoq#@5w=1irwbwea7beju+6(t8hc&8@kx9)!zc7fh+smwkx^*
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    "*",
     "assignment2-production-5e90.up.railway.app",
+    "127.0.0.1",
+    "localhost",
+    "*"
 ]
 
 
@@ -127,3 +129,6 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
+
+import os
+PORT = os.environ.get("PORT", 8000)
